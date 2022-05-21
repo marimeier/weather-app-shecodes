@@ -34,23 +34,42 @@ header {
 .input-city {
   font-size: 35px;
 }
-.card .text-dark {
+.card .daily {
   margin: 0 5px;
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #778899 1px;
+  padding: 6px;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cards {
+.cards-weekdays {
   text-align: center;
 }
-
+.name-day {
+  width: 100%;
+  padding: auto 0;
+  line-height: 1.5;
+}
+.weekday-temp {
+  line-height: 3rem;
+}
+.icon-weekday {
+  font-size: 28px;
+}
 .current-date {
   margin-top: 5px;
-  color: lightslategray;
+  color: #778899;
 }
 .header-weather {
   color: lightslategray;
   font-style: inherit;
 }
-.main {
+.main-information {
   text-align: center;
 }
 .current-temperature {
@@ -60,19 +79,14 @@ header {
 .other-info {
   font-size: 50px;
 }
-.fa-cloud-rain {
-  font-size: 35px;
-}
+
 .complementary-info {
   font-size: 13px;
   text-align: left;
   padding: 0 70px;
 }
-.card-header {
-  width: 100%;
-  padding: auto 0;
-}
-.cloud-rain.main-icon {
+
+.main-icon {
   padding-left: 20px;
   font-size: 40px;
 }
@@ -83,4 +97,15 @@ header {
   font-family: "Noto Serif", serif;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  display: block;
+}
+
+.openSrc {
+  font-size: 10px;
+  font-family: "Noto Serif", serif;
+  padding-right: 15px;
+  padding-left: 15px;
 }

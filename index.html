@@ -16,11 +16,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@100&weekday=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Serif&family=Poppins:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Serif&family=Poppins:wght@100&weekday=swap"
       rel="stylesheet"
     />
 
@@ -56,8 +56,8 @@
             <input type="submit" value="Search" />
           </form>
         </div>
-        <div class="card-body">
-          <div class="row main">
+        
+        <div class="row main-information">
             <div class="col-4 current-city">
               <h2 id="selectedCity">Dublin</h2>
               <div id="updatedDate">24-04-2022 9:55</div>
@@ -78,59 +78,71 @@
             </div>
           </div>
           <br />
-          <div class="row cards">
-            <div class="card text-dark bg-light mb-3" style="max-width: 7rem">
-              <div class="card-header">MON</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+          <div class="row cards-weekdays">
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day">MON</div>
+              <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
               </div>
-            </div>
-            <div class="card text-dark bg-light mb-3" style="max-width: 7rem">
-              <div class="card-header">TUE</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+            
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day">TUE</div>
+              <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
               </div>
-            </div>
-            <div class="card text-dark bg-light mb-3" style="max-width: 7em">
-              <div class="card-header">WED</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+            
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day">WED</div>
+                 <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
               </div>
-            </div>
-            <div class="card text-dark bg-light mb-3" style="max-width: 7rem">
-              <div class="card-header">THU</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+            
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day">THU</div>
+                 <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
               </div>
-            </div>
-            <div class="card text-dark bg-light mb-3" style="max-width: 7rem">
-              <div class="card-header">FRI</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+            
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day">FRI</div>
+                 <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
               </div>
-            </div>
-            <div class="card text-dark bg-light mb-3" style="max-width: 7rem">
-              <div class="card-header">SAT</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+            
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day">SAT</div>
+                 <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
               </div>
-            </div>
-            <div class="card text-dark bg-light mb-3" style="max-width: 7rem">
-              <div class="card-header" style="width: 100%">SUN</div>
-              <div class="card-body">
-                <h5 class="card-title">15°</h5>
-                <i class="fa-solid fa-cloud-rain"></i>
+            
+            <div class="card daily" style="max-width: 5rem">
+              <div class="name-day" style="width: 100%">SUN</div>
+                 <div class="weekday-temp">15°</div>
+                 <div class="icon-weekday">
+                  <i class="fa-solid fa-cloud-rain"></i></div>
+              </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="openSrc">
+      <span
+        ><a
+          href="https://github.com/marimeier/weather-app-shecodes"
+          target="_blank"
+          rel="noreferrer"
+          >Open-source code</a
+        ></span
+      >
+      <span class="byMarina"> by Marina Meier</span>
     </div>
     <script src="src/java.js"></script>
   </body>
