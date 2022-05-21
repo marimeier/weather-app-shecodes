@@ -1,0 +1,86 @@
+body {
+  background-color: rgb(243, 239, 247);
+}
+header {
+  display: flex;
+  background-color: #539b98;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 200%;
+  height: 100%;
+  max-width: 1440px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.mainTitle {
+  position: relative;
+  top: 15px;
+  bottom: 15px;
+  padding: 20px auto;
+  left: 39%;
+  right: 39%;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.header-location {
+  padding: 10px;
+  background-color: 539b98;
+  color: #539b98;
+}
+.input-city {
+  font-size: 35px;
+}
+.card .text-dark {
+  margin: 0 5px;
+}
+
+.cards {
+  text-align: center;
+}
+
+.current-date {
+  margin-top: 5px;
+  color: lightslategray;
+}
+.header-weather {
+  color: lightslategray;
+  font-style: inherit;
+}
+.main {
+  text-align: center;
+}
+.current-temperature {
+  font-size: 45px;
+  margin-top: 0;
+}
+.other-info {
+  font-size: 50px;
+}
+.fa-cloud-rain {
+  font-size: 35px;
+}
+.complementary-info {
+  font-size: 13px;
+  text-align: left;
+  padding: 0 70px;
+}
+.card-header {
+  width: 100%;
+  padding: auto 0;
+}
+.cloud-rain.main-icon {
+  padding-left: 20px;
+  font-size: 40px;
+}
+
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Noto Serif", serif;
+  margin-left: auto;
+  margin-right: auto;
+}
