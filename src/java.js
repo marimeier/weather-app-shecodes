@@ -13,13 +13,16 @@ let days = [
   "",
 ];
 let day = days[now.getDay()];
-console.log(day);
 
 let hour = now.getHours();
-console.log(hour);
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 
 let minutes = now.getMinutes();
-console.log(minutes);
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 updatedDate.innerHTML = `${day} ${hour}:${minutes}`;
 
@@ -31,8 +34,18 @@ function showTemp(response) {
   );
   document.querySelector("#descriptionWeather").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#prep").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].icon);
 }
 
 function search(event) {

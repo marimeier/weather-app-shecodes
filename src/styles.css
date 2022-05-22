@@ -14,6 +14,16 @@ header {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
+small {
+  font-size: 10px;
+  font-family: "Noto Serif", serif;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .mainTitle {
   font-weight: bold;
   color: white;
@@ -23,79 +33,10 @@ header {
   align-items: center;
 }
 
-.header-location {
-  padding: 10px;
-  background-color: 539b98;
-  color: #539b98;
-}
-.input-city {
-  font-size: 35px;
-}
-.card .daily {
-  margin: 0 5px;
-  box-sizing: border-box;
-  width: 100%;
-  border: solid #778899 1px;
-  padding: 6px;
-
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cards-weekdays {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.name-day {
-  width: 100%;
-  padding: auto 0;
-  line-height: 1.5;
-}
-.weekday-temp {
-  line-height: 3rem;
-}
-.icon-weekday {
-  font-size: 28px;
-}
-.current-date {
-  margin-top: 5px;
-  color: #778899;
-}
-.header-weather {
-  color: lightslategray;
-  font-style: inherit;
-}
-.main-information {
-  text-align: center;
-}
-.current-temperature {
-  font-size: 45px;
-  margin-top: 0;
-}
-.other-info {
-  font-size: 50px;
-}
-
-.complementary-info {
-  font-size: 13px;
-  text-align: left;
-  padding: 0 70px;
-}
-
-.main-icon {
-  padding-left: 20px;
-  font-size: 40px;
-}
-
 .container {
   margin-top: 40px;
   margin-bottom: 0;
-  font-family: "Noto Serif", serif;
+  font-family: Google Sans, arial, sans-serif;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -104,12 +45,130 @@ header {
   align-items: center;
 }
 
-.openSrc {
+.header-search-location {
+  padding: 15px 0;
+  color: #539b98;
+  margin-left: 15px;
+}
+
+.input-city {
+  font-size: 12px;
+}
+.search-button {
+  background-color: #539b98;
+  color: azure;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  border-width: 0.5px;
+  width: 100px;
+}
+
+.search-button:hover {
+  background-color: white;
+  color: #539b98;
+  border: 1px solid #539b98;
+}
+
+.name-city {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+.last-update {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  color: gray;
+  margin-top: 0;
+}
+.weather-description {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.weather-description:first-letter {
+  text-transform: capitalize;
+}
+
+.current-temperature {
+  font-size: 45px;
+  margin-top: 0;
+  line-height: 49px;
+  margin-right: 0;
+}
+.temp-convert {
   font-size: 10px;
-  font-family: "Noto Serif", serif;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0;
+  margin-left: 0;
+}
+.adtional-weather-info {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  width: auto;
+}
+
+.complementary-info {
+  font-size: 11px;
+  text-align: left;
+  padding: 0 5px;
+  margin-right: 2px;
+}
+
+.main-icon {
+  padding: 0 2px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.row-main-information {
+  display: flex;
+  margin: 15px 0;
+}
+
+.adjust-margin-first-column {
+  text-align: left;
+  margin-left: 4px;
+  padding: 0 3px;
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+.card .each-weekday {
+  margin: 0 4px;
+  box-sizing: border-box;
+  padding: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-weekdays {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.weekday-name {
+  padding: auto 0;
+  line-height: 1.5;
+  color: #539b98;
+  font-weight: bold;
+}
+.weekday-temp {
+  line-height: 2rem;
+}
+
+.icon-weekday {
+  font-size: 28px;
+  line-height: 3rem;
+}
+
+.header-weather {
+  color: lightslategray;
 }
