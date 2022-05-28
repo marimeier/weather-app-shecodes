@@ -27,6 +27,7 @@ if (minutes < 10) {
 updatedDate.innerHTML = `${day} ${hour}:${minutes}`;
 
 function showTemp(response) {
+  let currentIconElement = document.querySelector("#currentIcon");
   console.log(response.data);
   document.querySelector("#selectedCity").innerHTML = response.data.name;
   document.querySelector("#nowTemp").innerHTML = Math.round(
@@ -36,15 +37,13 @@ function showTemp(response) {
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  document
-    .querySelector("#icon")
-    .setAttribute(
-      "src",
-      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+  currentIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/02d@2x.png`
+  );
 
   document
-    .querySelector("#icon")
+    .querySelector("#currentIcon")
     .setAttribute("alt", response.data.weather[0].icon);
 }
 
