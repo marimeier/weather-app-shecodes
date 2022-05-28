@@ -41,184 +41,176 @@
         </h1>
       </div>
     </header>
-    <div class="container">
-      <div class="card box" style="width: 33rem">
-        <div class="header-search-location">
-          <form id="search-form">
-            <span class="search-field">
-              <input
-                type="text"
-                placeholder="Enter Location"
-                id="inputCity"
-                autofocus="on"
-                style="width: 23rem"
-              />
-            </span>
-            <input type="submit" value="Search" class="search-button" />
-          </form>
-        </div>
-
-        <div class="row row-main-information">
-          <div class="col-6 current-city-information">
-            <div class="adjust-margin-first-column">
-              <div class="name-city" id="selectedCity">Dublin</div>
-              <div class="weather-description" id="descriptionWeather">
-                cloudy
+    <div class="weather-app-wrapper">
+      <div class="container">
+        <div class="card box" style="width: 33rem">
+          <div class="header-search-location">
+            <form id="search-form">
+              <div class="row search-field">
+                <div class="col-5">
+                  <input
+                    type="text"
+                    placeholder="Enter Location"
+                    id="inputCity"
+                    autofocus="on"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="w-100 search-button"
+                  />
+                </div>
               </div>
-              <div class="last-update">
-              <span class="last-update-text">Last update:</span>
-              <span class="real-date last-update" id="updatedDate"
-                >24-04-2022 9:55</span
-              >
+            </form>
+          </div>
+
+          <div class="row row-main-information">
+            <div class="col-4 current-city-information">
+              <div class="adjust-margin-first-column">
+                <div class="name-city" id="selectedCity">Dublin</div>
+                <div class="weather-description" id="descriptionWeather">
+                  cloudy
+                </div>
+                <div class="last-update">
+                  <span class="last-update-text">Last update:</span>
+                  <span class="real-date last-update" id="updatedDate"
+                    >24-04-2022 9:55</span
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 current-weather-information">
-            <div class="adjust-margin-second-column">
-              <div class="current-temperature" style="display: inline">
-                <img
-                  class="main-icon"
-                  id="currentIcon"
-                  style="display: inline"
-                  alt=""
-                ></i>
-                <div class="display-inline" style="display: inline">
-                  <span class="now-temp" id="nowTemp" style="display: inline">
-                    10
-                  </span>
-                  <div class="temp-convert" style="display: inline">
-                    <span id="celcius" style="display: inline" role="button"
-                      >°C</span
-                    >|<span
+
+            <div class="col-4">
+              <div class="clearfix current-weather">
+                <img src="" class="float-left" id="currentIcon" alt="" />
+                <div class="float-left">
+                  <span class="now-temp" id="nowTemp"> 10 </span>
+                  <span class="temp-units">
+                    <span id="celcius" role="button">°C</span>|<span
                       id="fahrenheit"
-                      style="display: inline"
                       role="button"
                       >°F</span
                     >
-                  </div>
-                </div>
-                <div
-                  class="adtional-weather-info"
-                  style="display: inline-block"
-                >
-                  <div class="complementary-info" style="display: inline">
-                    Humidity: <span id="humidity"></span>%
-                  </div>
-                  <div class="complementary-info" style="display: block">
-                    Wind: <span id="wind"></span> km/h
-                  </div>
+                  </span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <br />
 
-        <div class="row row-weekdays">
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name">Mon</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
-            </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+            <div class="col-4 adtional-weather-info">
+              <ul class="complementary-info">
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
             </div>
           </div>
 
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name">Tue</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
+          <div class="row row-weekdays">
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name">Mon</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-            </div>
-          </div>
 
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name">Wed</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name">Tue</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-            </div>
-          </div>
 
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name">Thu</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name">Wed</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-            </div>
-          </div>
 
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name">Fri</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name">Thu</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-            </div>
-          </div>
 
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name">Sat</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name">Fri</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-            </div>
-          </div>
 
-          <div class="card each-weekday" style="max-width: 4rem">
-            <div class="weekday-name" style="width: 100%">Sun</div>
-            <div class="icon-weekday">
-              <i class="fa-solid fa-cloud-rain"></i>
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name">Sat</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
-            <div class="weekday-temp">
-              <span class="weekday-max-temp" id="wdMaxTemp"
-                ><strong>15°</strong></span
-              >
-              <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+
+            <div class="card each-weekday" style="max-width: 4rem">
+              <div class="weekday-name" style="width: 100%">Sun</div>
+              <div class="icon-weekday">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </div>
+              <div class="weekday-temp">
+                <span class="weekday-max-temp" id="wdMaxTemp"
+                  ><strong>15°</strong></span
+                >
+                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <small>
+        <a
+          href="https://github.com/marimeier/weather-app-shecodes"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open-source code
+        </a>
+        , by Marina Meier
+      </small>
     </div>
-
-    <small>
-      <a
-        href="https://github.com/marimeier/weather-app-shecodes"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Open-source code
-      </a>
-      , by Marina Meier
-    </small>
     <script src="src/java.js"></script>
   </body>
 </html>
