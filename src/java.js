@@ -29,7 +29,6 @@ updatedDate.innerHTML = `${day} ${hour}:${minutes}`;
 function showTemp(response) {
   let currentIconElement = document.querySelector("#currentIcon");
 
-  console.log(response.data);
   document.querySelector("#selectedCity").innerHTML = response.data.name;
   document.querySelector("#nowTemp").innerHTML = Math.round(
     response.data.main.temp
@@ -41,7 +40,7 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   currentIconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/02d@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
   document
