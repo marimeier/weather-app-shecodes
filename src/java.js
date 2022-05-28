@@ -82,5 +82,3 @@ function displayCelciusTemp(event) {
 document
   .querySelector("#celcius")
   .addEventListener("click", displayCelciusTemp);
-
-search("Dublin");

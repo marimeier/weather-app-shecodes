@@ -14,6 +14,9 @@ header {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
+li {
+  list-style: none;
+}
 small {
   font-size: 10px;
   font-family: "Noto Serif", serif;
@@ -108,7 +111,12 @@ small {
   padding-right: 0;
   margin-right: 0;
 }
-
+.img-float-left {
+  float: left;
+}
+.temp-float-right {
+  float: right;
+}
 .current-weather .temp-units {
   position: relative;
   font-size: 13px;
@@ -117,16 +125,24 @@ small {
   margin-left: 0;
 }
 
+.current-weather .celcius:hover {
+  color: blue;
+}
+.current-weather .fahrenheit:hover {
+  color: blue;
+}
+
 .temp-convert {
   font-size: 10px;
   padding: 0;
   margin-left: 0;
 }
 .adtional-weather-info {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 16px;
   width: auto;
+  color: gray;
 }
 
 .complementary-info {
