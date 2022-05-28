@@ -16,6 +16,7 @@ header {
 }
 li {
   list-style: none;
+  font-size: 13px;
 }
 small {
   font-size: 10px;
@@ -137,10 +138,8 @@ small {
   padding: 0;
   margin-left: 0;
 }
-.adtional-weather-info {
-  font-size: 13px;
+.complementary-info {
   font-weight: 400;
-  line-height: 16px;
   width: auto;
   color: gray;
 }
