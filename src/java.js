@@ -28,11 +28,13 @@ updatedDate.innerHTML = `${day} ${hour}:${minutes}`;
 
 function showTemp(response) {
   let currentIconElement = document.querySelector("#currentIcon");
+
   console.log(response.data);
   document.querySelector("#selectedCity").innerHTML = response.data.name;
   document.querySelector("#nowTemp").innerHTML = Math.round(
     response.data.main.temp
   );
+  celciusTemp = response.data.main.temp;
   document.querySelector("#descriptionWeather").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -59,3 +61,26 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  document.querySelector("#nowTemp").innerHTML = Math.round(
+    celciusTemp * 1.8 + 32
+  );
+  FahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+}
+document
+  .querySelector("#fahrenheit")
+  .addEventListener("click", displayFahrenheitTemp);
+
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  document.querySelector("#nowTemp").innerHTML = Math.round(
+    (FahrenheitTemp - 32) / 1.8
+  );
+}
+document
+  .querySelector("#celcius")
+  .addEventListener("click", displayCelciusTemp);
+
+search("Dublin");
