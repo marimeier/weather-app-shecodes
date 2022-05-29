@@ -47,7 +47,7 @@ function displayDailyForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="d-flex dailyCards">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 7) {
       forecastHTML =
@@ -109,7 +109,7 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#selectedCity");
+  let cityInputElement = document.querySelector("#inputCity");
   search(cityInputElement.value);
 }
 let form = document.querySelector("#search-form");
@@ -138,9 +138,9 @@ document
   .querySelector("#celcius")
   .addEventListener("click", displayCelciusTemp);
 
-function showPosition(position) {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-}
+//function showPosition(position) {
+//  console.log(position.coords.latitude);
+//  console.log(position.coords.longitude);
+//}
 
-navigator.geolocation.getCurrentPosition(showPosition);
+//navigator.geolocation.getCurrentPosition(showPosition);
