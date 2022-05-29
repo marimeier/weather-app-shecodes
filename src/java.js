@@ -36,6 +36,8 @@ function getDailyForecast(coordinates) {
   axios.get(apiUrl).then(displayDailyForecast);
 }
 
+//function displayDailyForecast(response) {}
+
 function showTemp(response) {
   let currentIconElement = document.querySelector("#currentIcon");
 
@@ -93,3 +95,10 @@ function displayCelciusTemp(event) {
 document
   .querySelector("#celcius")
   .addEventListener("click", displayCelciusTemp);
+
+function showPosition(position) {
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+}
+
+navigator.geolocation.getCurrentPosition(showPosition);
