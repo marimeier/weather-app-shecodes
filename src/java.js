@@ -26,6 +26,16 @@ if (minutes < 10) {
 
 updatedDate.innerHTML = `${day} ${hour}:${minutes}`;
 
+function getDailyForecast(coordinates) {
+  console.log(coordinates);
+  let apiEndPoint = "https://api.openweathermap.org/data/2.5/onecall";
+  let units = "metric";
+  let apiKey = "49aabf562ac60c9e71aefa24a3b6f528";
+  let apiUrl = `${apiEndPoint}?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayDailyForecast);
+}
+
 function showTemp(response) {
   let currentIconElement = document.querySelector("#currentIcon");
 
@@ -46,6 +56,8 @@ function showTemp(response) {
   document
     .querySelector("#currentIcon")
     .setAttribute("alt", response.data.weather[0].icon);
+
+  getDailyForecast(response.data.coord);
 }
 
 function search(event) {
