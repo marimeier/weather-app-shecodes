@@ -43,162 +43,73 @@
     </header>
     <div class="weather-app-wrapper">
       <div class="container">
-        <div class="card box" style="width: 33rem">
-          <div class="header-search-location">
-            <form id="search-form">
-              <div class="row search-field">
-                <div class="col-5">
-                  <input
-                    type="text"
-                    placeholder="Enter Location"
-                    id="inputCity"
-                    autofocus="on"
-                  />
+        <div class="card box" style="width: 37rem">
+          <div class="full-content-wrapper">
+            <div class="header-search-location">
+              <form id="search-form">
+                <div class="row search-field">
+                  <div class="col-5">
+                    <input
+                      type="text"
+                      placeholder="Enter Location"
+                      id="inputCity"
+                      autofocus="on"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <input
+                      type="submit"
+                      value="Search"
+                      class="w-100 search-button"
+                    />
+                  </div>
                 </div>
-                <div class="col-3">
-                  <input
-                    type="submit"
-                    value="Search"
-                    class="w-100 search-button"
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <div class="row row-main-information">
-            <div class="col-4 current-city-information">
-              <div class="adjust-margin-first-column">
-                <div class="name-city" id="selectedCity">Dublin</div>
-                <div class="weather-description" id="descriptionWeather">
-                  cloudy
-                </div>
-                <div class="last-update">
-                  <span class="last-update-text">Last update:</span>
-                  <span class="real-date last-update" id="updatedDate"
-                    >24-04-2022 9:55</span
-                  >
-                </div>
-              </div>
+              </form>
             </div>
 
-            <div class="col-4">
-              <div class="row row-temp">
-                <div class="current-weather">
-                  <img  id="currentIcon" alt="" ></img>
-
-                  <div class="temp-float-right">
-                    <span class="now-temp" id="nowTemp"> 10 </span>
-                    <span class="temp-units">
-                      <span class="celcius" id="celcius" role="button">°C</span
-                      >|<span id="fahrenheit" role="button" class="fahrenheit"
-                        >°F</span
-                      >
-                    </span>
+            <div class="row row-main-information">
+              <div class="col-4 current-city-information">
+                <div class="adjust-margin-first-column">
+                  <div class="name-city" id="selectedCity">Dublin</div>
+                  <div class="weather-description" id="descriptionWeather">
+                    cloudy
+                  </div>
+                  <div class="last-update">
+                    <span class="last-update-text">Last update:</span>
+                    <span class="real-date last-update" id="updatedDate"
+                      >24-04-2022 9:55</span
+                    >
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-4 adtional-weather-info">
-              <ul class="complementary-info">
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
-          </div>
+              <div class="col-4">
+                <div class="row row-temp">
+                  <div class="current-weather">
+                    <img id="currentIcon" alt="" />
 
-          <div class="row row-weekdays">
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name">Mon</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
+                    <div class="temp-float-right">
+                      <span class="now-temp" id="nowTemp"> 10 </span>
+                      <span class="temp-units">
+                        <span class="celcius" id="celcius" role="button"
+                          >°C</span
+                        >|<span id="fahrenheit" role="button" class="fahrenheit"
+                          >°F</span
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-              </div>
-            </div>
 
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name">Tue</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
+              <div class="col-4 adtional-weather-info">
+                <ul class="complementary-info">
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
               </div>
             </div>
-
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name">Wed</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-              </div>
-            </div>
-
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name">Thu</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-              </div>
-            </div>
-
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name">Fri</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-              </div>
-            </div>
-
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name">Sat</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-              </div>
-            </div>
-
-            <div class="card each-weekday" style="max-width: 4rem">
-              <div class="weekday-name" style="width: 100%">Sun</div>
-              <div class="icon-weekday">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </div>
-              <div class="weekday-temp">
-                <span class="weekday-max-temp" id="wdMaxTemp"
-                  ><strong>15°</strong></span
-                >
-                <span class="weekday-min-temp" id="wdMinTemp">7°</span>
-              </div>
-            </div>
+            <div class="weather-forecast" id="forecast"></div>
           </div>
         </div>
       </div>
