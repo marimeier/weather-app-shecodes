@@ -39,7 +39,6 @@ function getDailyForecast(coordinates) {
   let units = "metric";
   let apiKey = "49aabf562ac60c9e71aefa24a3b6f528";
   let apiUrl = `${apiEndPoint}?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayDailyForecast);
 }
 
@@ -100,18 +99,23 @@ function showTemp(response) {
   getDailyForecast(response.data.coord);
 }
 
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#inputCity").value;
+function search(city) {
   let units = "metric";
   let apiKey = "49aabf562ac60c9e71aefa24a3b6f528";
-  let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEndPoint}?q=${city}&units=${units}&appid=${apiKey}`;
-  axios.get(apiUrl).then(showTemp);
+  let apiEndPointSearch = "https://api.openweathermap.org/data/2.5/weather";
+  let apiUrlSearch = `${apiEndPointSearch}?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrlSearch).then(showTemp);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#selectedCity");
+  search(cityInputElement.value);
+}
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
+
+search("London");
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
