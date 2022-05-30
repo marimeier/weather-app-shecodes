@@ -172,14 +172,14 @@ small {
   box-sizing: border-box;
   padding: 6px;
   text-align: center;
-  display: flex;
+
   align-items: center;
   justify-content: center;
 }
 
 .weather-forecast {
   text-align: center;
-  display: flex;
+
   align-items: center;
   margin-left: auto;
   margin-right: auto;

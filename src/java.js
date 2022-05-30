@@ -47,7 +47,7 @@ function displayDailyForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="d-flex dailyCards">`;
+  let forecastHTML = `<div class="d-flex dailyCards" >`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 7) {
       forecastHTML =
@@ -114,8 +114,7 @@ function handleSubmit(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-search("London");
+search("Galway");
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
