@@ -79,6 +79,9 @@ function showTemp(response) {
   let currentIconElement = document.querySelector("#currentIcon");
 
   document.querySelector("#selectedCity").innerHTML = response.data.name;
+  document.querySelector("#realfeel").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#nowTemp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -116,26 +119,26 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 search("Galway");
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  document.querySelector("#nowTemp").innerHTML = Math.round(
-    celciusTemp * 1.8 + 32
-  );
-  FahrenheitTemp = (celciusTemp * 9) / 5 + 32;
-}
-document
-  .querySelector("#fahrenheit")
-  .addEventListener("click", displayFahrenheitTemp);
+//function displayFahrenheitTemp(event) {
+//  event.preventDefault();
+//  document.querySelector("#nowTemp").innerHTML = Math.round(
+//    celciusTemp * 1.8 + 32
+//  );
+//  FahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+//}
+//document
+//  .querySelector("#fahrenheit")
+//  .addEventListener("click", displayFahrenheitTemp);
 
-function displayCelciusTemp(event) {
-  event.preventDefault();
-  document.querySelector("#nowTemp").innerHTML = Math.round(
-    (FahrenheitTemp - 32) / 1.8
-  );
-}
-document
-  .querySelector("#celcius")
-  .addEventListener("click", displayCelciusTemp);
+//function displayCelciusTemp(event) {
+//  event.preventDefault();
+//  document.querySelector("#nowTemp").innerHTML = Math.round(
+//    (FahrenheitTemp - 32) / 1.8
+//  );
+//}
+//document
+//  .querySelector("#celcius")
+//  .addEventListener("click", displayCelciusTemp);
 
 //function showPosition(position) {
 //  console.log(position.coords.latitude);
