@@ -52,7 +52,7 @@ function displayDailyForecast(response) {
     if (index < 7) {
       forecastHTML =
         forecastHTML +
-        `<div class="card each-weekday" style="max-width: 4rem">
+        `<div class="card each-weekday" style="flex: 1">
               <div class="weekday-name">${formatDay(forecastDay.dt)} </div>
               <div class="icon-weekday">
                 <img src="https://openweathermap.org/img/wn/${
