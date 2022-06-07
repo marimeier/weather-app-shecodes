@@ -35,6 +35,7 @@ function formatDay(timestamp) {
 
 function getDailyForecast(coordinates) {
   console.log(coordinates);
+
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/onecall";
   let units = "metric";
   let apiKey = "49aabf562ac60c9e71aefa24a3b6f528";
@@ -139,10 +140,3 @@ search("Galway");
 //document
 //  .querySelector("#celcius")
 //  .addEventListener("click", displayCelciusTemp);
-
-//function showPosition(position) {
-//  console.log(position.coords.latitude);
-//  console.log(position.coords.longitude);
-//}
-
-//navigator.geolocation.getCurrentPosition(showPosition);

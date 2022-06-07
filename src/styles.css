@@ -64,7 +64,7 @@ small {
   border: 1px solid lightgray;
   border-radius: 3px;
   border-width: 0.5px;
-  width: 100px;
+  font-size: 13px;
 }
 
 .search-button:hover {
@@ -103,15 +103,14 @@ small {
 }
 
 .current-weather img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin-right: 0;
   line-height: 1;
 }
 
 .current-weather .now-temp {
-  font-size: 45px;
-
+  font-size: 40px;
   font-weight: 400;
   padding-right: 0;
   margin-right: 0;
@@ -121,6 +120,7 @@ small {
 }
 .temp-float-right {
   float: right;
+  white-space: nowrap;
 }
 .current-weather .temp-units {
   position: relative;
