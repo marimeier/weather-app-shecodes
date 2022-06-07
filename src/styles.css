@@ -9,10 +9,17 @@ header {
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 40px;
   max-width: 1440px;
   text-align: center;
   font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  padding-right: 0;
+  margin-right: 0;
+  white-space: nowrap;
 }
 li {
   list-style: none;
@@ -35,6 +42,7 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25px;
 }
 
 .container {
@@ -52,7 +60,11 @@ small {
 .header-search-location {
   padding: 10px 0;
   color: #539b98;
-  margin-left: 15px;
+  margin: 5px 10px 0;
+}
+
+.row-main-information {
+  margin: 5px 10px 20px 0;
 }
 
 .input-city {
@@ -66,7 +78,9 @@ small {
   border-width: 0.5px;
   font-size: 12px;
 
-  line-height: 25px;
+  line-height: 22px;
+  min-width: 30px;
+  max-width: 60px;
 }
 
 .search-button:hover {
@@ -76,23 +90,24 @@ small {
 }
 
 .name-city {
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 500;
   line-height: 26px;
   margin-bottom: 0;
+  opacity: 95%;
 }
 .last-update {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 15px;
-  color: gray;
+  opacity: 90%;
   margin: 0 0 2px 0;
 }
 .weather-description {
   font-family: arial, sans-serif;
   font-size: 13px;
-  font-weight: 400;
-  color: gray;
+
+  opacity: 90%;
   line-height: 15px;
 }
 .weather-description:first-letter {
@@ -101,22 +116,19 @@ small {
 
 .current-weather {
   margin-bottom: 0;
-  padding: 0;
+  padding: 0 auto;
+  align-items: center;
 }
 
 .current-weather img {
-  width: 50px;
-  height: 50px;
-  margin-right: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-top: -10px;
+  margin-left: auto;
   line-height: 1;
 }
 
-.current-weather .now-temp {
-  font-size: 40px;
-  font-weight: 400;
-  padding-right: 0;
-  margin-right: 0;
-}
 .img-float-left {
   float: left;
 }
@@ -124,19 +136,16 @@ small {
   float: right;
   white-space: nowrap;
 }
-.current-weather .temp-units {
+.current-weather .temp-convert {
   position: relative;
-  font-size: 11px;
-  top: -32px;
+  font-size: 10px;
+  top: -5px;
   padding-left: 0;
   margin-left: 0;
 }
 
 .current-weather .celcius:hover {
-  color: blue;
-}
-.current-weather .fahrenheit:hover {
-  color: blue;
+  color: rgb(89, 89, 91);
 }
 
 .temp-convert {
@@ -148,13 +157,13 @@ small {
 }
 
 .complementary-info {
-  font-size: 11px;
+  font-size: 13px;
   text-align: right;
   padding: 0 5px;
   margin-right: 2px;
-  font-weight: 400;
+
   width: auto;
-  color: gray;
+  opacity: 90%;
 }
 
 .realFeel {
@@ -162,20 +171,16 @@ small {
   font-weight: 400;
   line-height: 13px;
   color: gray;
-  text-align: left;
-  padding-left: 10px;
+  text-align: right;
+  margin-right: 4px;
   margin-top: -7px;
+  margin-left: auto;
 }
 
 .main-icon {
   padding: 0;
-  font-size: 13px;
-  line-height: 13px;
-}
-
-.row-main-information {
-  display: -moz-inline-box;
-  margin: 15px 0;
+  font-size: 15px;
+  line-height: 15px;
 }
 
 .adjust-margin-first-column {
