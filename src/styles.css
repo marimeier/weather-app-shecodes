@@ -82,11 +82,11 @@ small {
   margin-bottom: 0;
 }
 .last-update {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 15px;
   color: gray;
-  margin-top: 0;
+  margin: 0 0 2px 0;
 }
 .weather-description {
   font-family: arial, sans-serif;
